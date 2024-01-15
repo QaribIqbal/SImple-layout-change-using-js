@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bk">
+    <section class="bk">
+    <button type="button" class="btn">Red color</button>
+    <button type="button" class="btn">Black color</button>
+    <button type="button" class="btn">Blue color</button>
+    <button type="button" class="btn">RGB color</button>
+</section>
+</body>
+<script>
+    let bk=document.querySelector('.bk');
+let buttons = document.querySelectorAll('.btn');
+buttons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        if(e.target.innerHTML == "Red color") {
+            //e.target.style.backgroundColor='gold';
+            bk.style.background = 'red';
+        }
+        else if(e.target.innerHTML=="Black color")
+        {
+            //e.target.style.backgroundColor='gold';
+            bk.style.background='black';
+        }
+        else if(e.target.innerHTML=='Blue color')
+        {
+            //e.target.style.backgroundColor='gold';
+            bk.style.background='blue';
+        }
+        else if(e.target.innerHTML=="RGB color")
+        {
+            bk.style.background = 'linear-gradient(to left, blue, red)';
+
+        }
+        
+    });
+});
+</script>
+</html>
